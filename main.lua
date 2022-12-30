@@ -1,4 +1,6 @@
 push = require 'push'
+Class = require 'class'
+require 'Animation'
 
 function initSprites()
     sprites = {}
@@ -51,45 +53,50 @@ function love.load()
     setupWindow()
 
     cubone = sprites[1].image
+    speed = 120
     x = VIRTUAL_WIDTH
     y = VIRTUAL_HEIGHT / 2
+    anime = Animation {
+        frames = {cubone},
+        interval = 0.2
+    }
 end
  
 function love.draw()
-    love.graphics.draw(cubone, x, y, 0, 2.5, 2.5)
+    love.graphics.draw(anime:getCurrentFrame(), x, y, 0, 2, 2) 
     displayFPS()
 end
 
 function walkUp(dt)
-    cubone = sprites[4].image
-    cubone = sprites[3].image
     if y > 0 then
-        y = y - 120*dt
+        y = y - speed*dt
     end
+    anime:update(dt)
+    anime.frames = {sprites[4].image, sprites[3].image}
 end
 
 function walkDown(dt)
-    cubone = sprites[2].image
-    cubone = sprites[1].image
     if y < WINDOW_HEIGHT - 90 then 
-        y = y + 120*dt
+        y = y + speed*dt
     end
+    anime:update(dt)
+    anime.frames = {sprites[2].image, sprites[1].image}
 end
 
 function walkLeft(dt)
-    cubone = sprites[6].image
-    cubone = sprites[5].image
     if x > 0 then
-        x = x - 120*dt
+        x = x - speed*dt
     end
+    anime:update(dt)
+    anime.frames = {sprites[6].image, sprites[5].image}
 end
 
 function walkRight(dt)
-    cubone = sprites[8].image
-    cubone = sprites[7].image
     if x < WINDOW_WIDTH - 80  then
-        x = x + 120*dt
+        x = x + speed*dt
     end
+    anime:update(dt)
+    anime.frames = {sprites[8].image, sprites[7].image}
 end
 
 function love.update(dt)
