@@ -35,6 +35,7 @@ function setupWindow()
         resizable = false
     })
 
+    love.window.setTitle('Cubone')
     love.graphics.setDefaultFilter("nearest", "nearest")
 end
 
