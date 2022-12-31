@@ -1,6 +1,6 @@
-push = require 'push'
-Class = require 'class'
-require 'Animation'
+push = require 'libs/push'
+Class = require 'libs/class'
+require 'libs/Animation'
 
 function initSprites()
     sprites = {}
