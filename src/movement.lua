@@ -1,5 +1,5 @@
 function walkUp(dt)
-    if y > 0 then
+    if y > - sprites[3]:getHeight() then
         y = y - speed*dt
     end
     anime:update(dt)
@@ -15,7 +15,7 @@ function walkDown(dt)
 end
 
 function walkLeft(dt)
-    if x > 0 then
+    if x - 16 > - sprites[6]:getWidth() then
         x = x - speed*dt
     end
     anime:update(dt)
@@ -23,7 +23,7 @@ function walkLeft(dt)
 end
 
 function walkRight(dt)
-    if x < WINDOW_WIDTH - 80  then
+    if x < WINDOW_WIDTH - 70 then
         x = x + speed*dt
     end
     anime:update(dt)
