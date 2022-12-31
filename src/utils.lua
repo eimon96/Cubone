@@ -21,6 +21,7 @@ end
 function initSounds()
     sounds = {}
     sounds['music'] = love.audio.newSource("sounds/music.mp3", "static")
+    sounds['hit']   = love.audio.newSource("sounds/hit.wav", "static")
 end
 
 function setupWindow()
