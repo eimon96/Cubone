@@ -13,6 +13,7 @@ function initSprites()
     sprites[6] = {image = love.graphics.newImage("sprites/left_walk.png")}
     sprites[7] = {image = love.graphics.newImage("sprites/right_stand.png")}
     sprites[8] = {image = love.graphics.newImage("sprites/right_walk.png")}
+    sprites[9] = {image = love.graphics.newImage("sprites/grass.png")}
 end
 
 function initSounds()
@@ -21,8 +22,8 @@ function initSounds()
 end
 
 function setupWindow()
-    WINDOW_WIDTH = 700
-    WINDOW_HEIGHT = 500
+    WINDOW_WIDTH = 719
+    WINDOW_HEIGHT = 494
     VIRTUAL_WIDTH = 300
     VIRTUAL_HEIGHT = 200
 
@@ -35,9 +36,22 @@ function setupWindow()
     love.graphics.setDefaultFilter("nearest", "nearest")
 end
 
+function drawBackground()
+    background = sprites[9].image 
+    rsz = 2.8
+
+    love.graphics.setColor(0, 1, 1)
+    for i = 0, WINDOW_WIDTH / background:getWidth() do
+        for j = 0, WINDOW_HEIGHT / background:getHeight() do
+          love.graphics.draw(background, i * background:getWidth()*rsz, j * background:getHeight()*rsz, 0, rsz, rsz)
+        end
+    end
+    love.graphics.setColor(255, 255, 255, 255)
+end
+
 function displayFPS()
-    love.graphics.setColor(0, 255/255, 0, 255/255)
-    love.graphics.print('FPS: ' .. tostring(love.timer.getFPS()), 10, 10)
+    love.graphics.setColor(1, 1, 0)
+    love.graphics.print('FPS: ' .. tostring(love.timer.getFPS()), 10, 10, 0, 2, 2)
     love.graphics.setColor(255, 255, 255, 255)
 end
 

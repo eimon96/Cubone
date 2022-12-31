@@ -19,7 +19,8 @@ function love.load()
 end
  
 function love.draw()
-    love.graphics.draw(anime:getCurrentFrame(), x, y, 0, 2, 2) 
+    drawBackground()
+    love.graphics.draw(anime:getCurrentFrame(), x, y, 0, 2.6, 2.6) 
     displayFPS()
 end
 
