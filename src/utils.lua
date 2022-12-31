@@ -4,6 +4,8 @@ require 'libs/Animation'
 require 'src/movement'
 
 function initSprites()
+    -- https://www.pokencyclopedia.info/en/index.php?id=sprites/104
+    
     sprites = {}
     sprites[1] = {image = love.graphics.newImage("sprites/face_stand.png")}
     sprites[2] = {image = love.graphics.newImage("sprites/face_walk.png")}
@@ -51,7 +53,7 @@ end
 
 function displayFPS()
     love.graphics.setColor(1, 1, 0)
-    love.graphics.print('FPS: ' .. tostring(love.timer.getFPS()), 10, 10, 0, 2, 2)
+    love.graphics.print('FPS: ' .. tostring(love.timer.getFPS()), 10, 10, 0, 1.5, 1.5)
     love.graphics.setColor(255, 255, 255, 255)
 end
 
