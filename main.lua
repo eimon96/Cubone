@@ -1,8 +1,9 @@
-require 'utils'
+require 'src/utils'
 
 function love.load()
     initSprites()
     setupWindow()
+    initSounds()
 
     cubone = sprites[1].image
     speed = 120
@@ -12,6 +13,9 @@ function love.load()
         frames = {cubone},
         interval = 0.2
     }
+
+    sounds['music']:setLooping(true)
+    sounds['music']:play()
 end
  
 function love.draw()

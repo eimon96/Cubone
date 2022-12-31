@@ -1,7 +1,7 @@
 push = require 'libs/push'
 Class = require 'libs/class'
 require 'libs/Animation'
-require 'movement'
+require 'src/movement'
 
 function initSprites()
     sprites = {}
@@ -13,6 +13,11 @@ function initSprites()
     sprites[6] = {image = love.graphics.newImage("sprites/left_walk.png")}
     sprites[7] = {image = love.graphics.newImage("sprites/right_stand.png")}
     sprites[8] = {image = love.graphics.newImage("sprites/right_walk.png")}
+end
+
+function initSounds()
+    sounds = {}
+    sounds['music'] = love.audio.newSource("sounds/music.mp3", "static")
 end
 
 function setupWindow()
