@@ -3,7 +3,7 @@ function walkUp(dt)
         y = y - speed*dt
     end
     anime:update(dt)
-    anime.frames = {sprites[4].image, sprites[3].image}
+    anime.frames = {sprites[4], sprites[3]}
 end
 
 function walkDown(dt)
@@ -11,7 +11,7 @@ function walkDown(dt)
         y = y + speed*dt
     end
     anime:update(dt)
-    anime.frames = {sprites[2].image, sprites[1].image}
+    anime.frames = {sprites[2], sprites[1]}
 end
 
 function walkLeft(dt)
@@ -19,7 +19,7 @@ function walkLeft(dt)
         x = x - speed*dt
     end
     anime:update(dt)
-    anime.frames = {sprites[6].image, sprites[5].image}
+    anime.frames = {sprites[6], sprites[5]}
 end
 
 function walkRight(dt)
@@ -27,5 +27,5 @@ function walkRight(dt)
         x = x + speed*dt
     end
     anime:update(dt)
-    anime.frames = {sprites[8].image, sprites[7].image}
+    anime.frames = {sprites[8], sprites[7]}
 end

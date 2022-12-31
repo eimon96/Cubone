@@ -7,15 +7,15 @@ function initSprites()
     -- https://www.pokencyclopedia.info/en/index.php?id=sprites/104
     
     sprites = {}
-    sprites[1] = {image = love.graphics.newImage("sprites/face_stand.png")}
-    sprites[2] = {image = love.graphics.newImage("sprites/face_walk.png")}
-    sprites[3] = {image = love.graphics.newImage("sprites/back_stand.png")}
-    sprites[4] = {image = love.graphics.newImage("sprites/back_walk.png")}
-    sprites[5] = {image = love.graphics.newImage("sprites/left_stand.png")}
-    sprites[6] = {image = love.graphics.newImage("sprites/left_walk.png")}
-    sprites[7] = {image = love.graphics.newImage("sprites/right_stand.png")}
-    sprites[8] = {image = love.graphics.newImage("sprites/right_walk.png")}
-    sprites[9] = {image = love.graphics.newImage("sprites/grass.png")}
+    sprites[1] = love.graphics.newImage("sprites/face_stand.png")
+    sprites[2] = love.graphics.newImage("sprites/face_walk.png")
+    sprites[3] = love.graphics.newImage("sprites/back_stand.png")
+    sprites[4] = love.graphics.newImage("sprites/back_walk.png")
+    sprites[5] = love.graphics.newImage("sprites/left_stand.png")
+    sprites[6] = love.graphics.newImage("sprites/left_walk.png")
+    sprites[7] = love.graphics.newImage("sprites/right_stand.png")
+    sprites[8] = love.graphics.newImage("sprites/right_walk.png")
+    sprites[9] = love.graphics.newImage("sprites/grass.png")
 end
 
 function initSounds()
@@ -39,7 +39,7 @@ function setupWindow()
 end
 
 function drawBackground()
-    background = sprites[9].image 
+    background = sprites[9] 
     rsz = 2.8
 
     love.graphics.setColor(0, 1, 1)

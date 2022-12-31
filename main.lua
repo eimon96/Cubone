@@ -5,7 +5,7 @@ function love.load()
     setupWindow()
     initSounds()
 
-    cubone = sprites[1].image
+    cubone = sprites[1]
     speed = 120
     x = VIRTUAL_WIDTH
     y = VIRTUAL_HEIGHT / 2
