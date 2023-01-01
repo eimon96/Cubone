@@ -6,7 +6,7 @@ function love.load()
     initSounds()
 
     cubone = sprites[1]
-    speed = 120
+    SPEED = 120
     x = VIRTUAL_WIDTH
     y = VIRTUAL_HEIGHT / 2
     anime = Animation {
