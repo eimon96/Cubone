@@ -3,6 +3,7 @@ Class = require 'libs/class'
 require 'libs/Animation'
 require 'src/movement'
 require 'src/before_battle'
+require 'src/battle'
 
 function initSprites()
     -- https://www.pokencyclopedia.info/en/index.php?id=sprites/104
@@ -17,6 +18,7 @@ function initSprites()
     sprites[7] = love.graphics.newImage("sprites/right_stand.png")
     sprites[8] = love.graphics.newImage("sprites/right_walk.png")
     sprites[9] = love.graphics.newImage("sprites/grass.png")
+    sprites[10] = love.graphics.newImage("sprites/cubone_battle.png")
 end
 
 function initSounds()
