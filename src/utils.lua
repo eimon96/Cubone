@@ -18,6 +18,7 @@ function initSprites()
     sprites[7] = love.graphics.newImage("sprites/right_stand.png")
     sprites[8] = love.graphics.newImage("sprites/right_walk.png")
     sprites[9] = love.graphics.newImage("sprites/grass.png")
+    sprites[90] = love.graphics.newImage("sprites/no_grass.png")
     sprites[91] = love.graphics.newImage("sprites/battlefield.jpg")
     sprites[10] = love.graphics.newImage("sprites/cubone_battle.png")
 end
@@ -49,13 +50,18 @@ function setupWindow()
 end
 
 function drawBackground()
-    background = sprites[9] 
+    grass = sprites[9]
+    no_grass = sprites[90] 
     rsz = 2.8
 
     love.graphics.setColor(0, 1, 1)
-    for i = 0, WINDOW_WIDTH / background:getWidth() do
-        for j = 0, WINDOW_HEIGHT / background:getHeight() do
-          love.graphics.draw(background, i * background:getWidth()*rsz, j * background:getHeight()*rsz, 0, rsz, rsz)
+    for i = 0, WINDOW_WIDTH / grass:getWidth() do
+        for j = 0, WINDOW_HEIGHT / grass:getHeight() do
+            if (i + j) % 2 == 0 or (i + j) % 3 == 0 then
+                love.graphics.draw(grass, i * grass:getWidth()*rsz, j * grass:getHeight()*rsz, 0, rsz, rsz)
+            else
+                love.graphics.draw(no_grass, i * grass:getWidth()*rsz, j * grass:getHeight()*rsz, 0, rsz, rsz)
+            end
         end
     end
     love.graphics.setColor(255, 255, 255, 255)
