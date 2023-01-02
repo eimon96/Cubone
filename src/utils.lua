@@ -18,6 +18,7 @@ function initSprites()
     sprites[7] = love.graphics.newImage("sprites/right_stand.png")
     sprites[8] = love.graphics.newImage("sprites/right_walk.png")
     sprites[9] = love.graphics.newImage("sprites/grass.png")
+    sprites[91] = love.graphics.newImage("sprites/battlefield.jpg")
     sprites[10] = love.graphics.newImage("sprites/cubone_battle.png")
 end
 
@@ -33,7 +34,7 @@ end
 
 function setupWindow()
     WINDOW_WIDTH = 719
-    WINDOW_HEIGHT = 494
+    WINDOW_HEIGHT = 448
     VIRTUAL_WIDTH = 300
     VIRTUAL_HEIGHT = 200
 

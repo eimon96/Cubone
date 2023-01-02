@@ -5,7 +5,7 @@ function love.load()
     setupWindow()
     initSounds()
 
-    state = 'battle'
+    state = 'world'
     pkmn = false
 
     cubone = sprites[1]
@@ -35,6 +35,7 @@ function love.draw()
     end
 
     if state == 'battle' then 
+        drawBattleField()
         drawCubone()
     end
 end
