@@ -2,6 +2,7 @@ push = require 'libs/push'
 Class = require 'libs/class'
 require 'libs/Animation'
 require 'src/movement'
+require 'src/before_battle'
 
 function initSprites()
     -- https://www.pokencyclopedia.info/en/index.php?id=sprites/104
@@ -22,7 +23,9 @@ function initSounds()
     sounds = {}
     sounds['music'] = love.audio.newSource("sounds/music.mp3", "static")
     sounds['music']:setVolume(0.7)
-    sounds['hit']   = love.audio.newSource("sounds/hit.wav", "static")
+    sounds['battle'] = love.audio.newSource("sounds/battle.mp3", "static")
+    sounds['battle']:setVolume(0.7)
+    sounds['hit'] = love.audio.newSource("sounds/hit.wav", "static")
     sounds['hit']:setVolume(0.3)
 end
 

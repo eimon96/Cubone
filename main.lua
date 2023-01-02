@@ -6,6 +6,7 @@ function love.load()
     initSounds()
 
     state = 'world'
+    pkmn = false
 
     cubone = sprites[1]
     SPEED = 120
@@ -27,6 +28,12 @@ function love.draw()
     end
     
     displayFPS()
+
+    if pkmn then
+        changeMusic()
+        state = 'battle'
+        love.graphics.print(state)
+    end
 end
 
 function love.update(dt)

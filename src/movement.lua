@@ -1,6 +1,7 @@
 function walkUp(dt)
     if y > - sprites[3]:getHeight() then
         y = y - SPEED*dt
+        checkEnemy()
     else
         sounds['hit']:play()
     end
@@ -11,6 +12,7 @@ end
 function walkDown(dt)
     if y < WINDOW_HEIGHT - 90 then 
         y = y + SPEED*dt
+        checkEnemy()
     else
         sounds['hit']:play()
     end
@@ -21,6 +23,7 @@ end
 function walkLeft(dt)
     if x - 16 > - sprites[6]:getWidth() then
         x = x - SPEED*dt
+        checkEnemy()
     else
         sounds['hit']:play()
     end
@@ -31,6 +34,7 @@ end
 function walkRight(dt)
     if x < WINDOW_WIDTH - 70 then
         x = x + SPEED*dt
+        checkEnemy()
     else
         sounds['hit']:play()
     end
