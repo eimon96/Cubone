@@ -48,6 +48,7 @@ function setupWindow()
 
     love.window.setTitle('Cubone')
     love.graphics.setDefaultFilter("nearest", "nearest")
+    love.mouse.setVisible(false)
 end
 
 function drawBackground()
