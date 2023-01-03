@@ -1,6 +1,6 @@
 push = require 'libs/push'
 Class = require 'libs/class'
-stora = 'libs/stora/Stora.ttf'
+stora = 'fonts/Stora.ttf'
 require 'libs/Animation'
 require 'src/movement'
 require 'src/before_battle'
