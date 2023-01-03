@@ -64,13 +64,13 @@ function drawBackground()
             end
         end
     end
-    love.graphics.setColor(255, 255, 255, 255)
+    love.graphics.setColor(1, 1, 1, 1)
 end
 
 function displayFPS()
     love.graphics.setColor(1, 1, 0)
     love.graphics.print('FPS: ' .. tostring(love.timer.getFPS()), 10, 10, 0, 1.5, 1.5)
-    love.graphics.setColor(255, 255, 255, 255)
+    love.graphics.setColor(1, 1, 1, 1)
 end
 
 -- better dont
