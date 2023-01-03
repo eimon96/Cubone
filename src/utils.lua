@@ -1,5 +1,6 @@
 push = require 'libs/push'
 Class = require 'libs/class'
+stora = 'libs/stora/Stora.ttf'
 require 'libs/Animation'
 require 'src/movement'
 require 'src/before_battle'
@@ -69,7 +70,9 @@ end
 
 function displayFPS()
     love.graphics.setColor(1, 1, 0)
-    love.graphics.print('FPS: ' .. tostring(love.timer.getFPS()), 10, 10, 0, 1.5, 1.5)
+	font = love.graphics.newFont(stora, 18)
+    love.graphics.setFont(font) 
+    love.graphics.print('FPS: ' .. tostring(love.timer.getFPS()), 10, 10)
     love.graphics.setColor(1, 1, 1, 1)
 end
 
