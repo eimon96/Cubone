@@ -10,5 +10,5 @@ end
 
 function drawEnemy()
     local rsz = 3
-    love.graphics.draw(enemies[e], WINDOW_WIDTH - enemies[e]:getWidth()*rsz - 5, 5, 0, rsz, rsz)
+    love.graphics.draw(enemies[e].image, WINDOW_WIDTH - enemies[e].image:getWidth()*rsz - 5, 5, 0, rsz, rsz)
 end

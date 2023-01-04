@@ -22,17 +22,28 @@ function initSprites()
     sprites[90] = love.graphics.newImage("sprites/no_grass.png")
     sprites[91] = love.graphics.newImage("sprites/battlefield.jpg")
     sprites[10] = love.graphics.newImage("sprites/cubone_battle.png")
+end
 
+function initEnemies()
     enemies = {}
-    enemies[1] = love.graphics.newImage("sprites/enemies/suicune.png")
-    enemies[2] = love.graphics.newImage("sprites/enemies/rayquaza.png")
-    enemies[3] = love.graphics.newImage("sprites/enemies/raikou.png")
-    enemies[4] = love.graphics.newImage("sprites/enemies/palkia.png")
-    enemies[5] = love.graphics.newImage("sprites/enemies/mew.png")
-    enemies[6] = love.graphics.newImage("sprites/enemies/lugia.png")
-    enemies[7] = love.graphics.newImage("sprites/enemies/entei.png")
-    enemies[8] = love.graphics.newImage("sprites/enemies/dialga.png")
-    enemies[9] = love.graphics.newImage("sprites/enemies/articuno.png")
+    enemies[1] = { image = love.graphics.newImage("sprites/enemies/suicune.png"),
+                   growl = love.audio.newSource("sounds/growl/suicune.ogg", "static") }
+    enemies[2] = { image = love.graphics.newImage("sprites/enemies/rayquaza.png"),
+                   growl = love.audio.newSource("sounds/growl/rayquaza.ogg", "static") }
+    enemies[3] = { image = love.graphics.newImage("sprites/enemies/raikou.png"),
+                   growl = love.audio.newSource("sounds/growl/raikou.ogg", "static") }
+    enemies[4] = { image = love.graphics.newImage("sprites/enemies/palkia.png"),
+                   growl = love.audio.newSource("sounds/growl/palkia.ogg", "static") }
+    enemies[5] = { image = love.graphics.newImage("sprites/enemies/mew.png"),
+                   growl = love.audio.newSource("sounds/growl/mew.ogg", "static") }
+    enemies[6] = { image = love.graphics.newImage("sprites/enemies/lugia.png"),
+                   growl = love.audio.newSource("sounds/growl/lugia.ogg", "static") }
+    enemies[7] = { image = love.graphics.newImage("sprites/enemies/entei.png"),
+                   growl = love.audio.newSource("sounds/growl/entei.ogg", "static") }
+    enemies[8] = { image = love.graphics.newImage("sprites/enemies/dialga.png"),
+                   growl = love.audio.newSource("sounds/growl/dialga.ogg", "static") }
+    enemies[9] = { image = love.graphics.newImage("sprites/enemies/articuno.png"),
+                   growl = love.audio.newSource("sounds/growl/articuno.ogg", "static") }
 end
 
 function initSounds()
