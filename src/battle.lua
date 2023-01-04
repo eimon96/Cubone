@@ -9,5 +9,6 @@ function drawBattleField()
 end
 
 function drawEnemy()
-    love.graphics.draw(enemies[e])
+    local rsz = 3
+    love.graphics.draw(enemies[e], WINDOW_WIDTH - enemies[e]:getWidth()*rsz - 5, 5, 0, rsz, rsz)
 end

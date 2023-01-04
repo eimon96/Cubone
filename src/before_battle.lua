@@ -15,5 +15,6 @@ end
 function pickEnemy()
     math.randomseed(os.time())
     math.random(1,9); math.random(1,9); math.random(1,9)
+    
     return math.random(1,9)
 end
