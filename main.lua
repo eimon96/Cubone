@@ -37,6 +37,7 @@ function love.draw()
     if state == 'battle' then 
         drawBattleField()
         drawCubone()
+        drawEnemy()
     end
 end
 

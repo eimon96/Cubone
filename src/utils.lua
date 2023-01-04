@@ -22,6 +22,17 @@ function initSprites()
     sprites[90] = love.graphics.newImage("sprites/no_grass.png")
     sprites[91] = love.graphics.newImage("sprites/battlefield.jpg")
     sprites[10] = love.graphics.newImage("sprites/cubone_battle.png")
+
+    enemies = {}
+    enemies[1] = love.graphics.newImage("sprites/enemies/suicune.png")
+    enemies[2] = love.graphics.newImage("sprites/enemies/rayquaza.png")
+    enemies[3] = love.graphics.newImage("sprites/enemies/raikou.png")
+    enemies[4] = love.graphics.newImage("sprites/enemies/palkia.png")
+    enemies[5] = love.graphics.newImage("sprites/enemies/mew.png")
+    enemies[6] = love.graphics.newImage("sprites/enemies/lugia.png")
+    enemies[7] = love.graphics.newImage("sprites/enemies/entei.png")
+    enemies[8] = love.graphics.newImage("sprites/enemies/dialga.png")
+    enemies[9] = love.graphics.newImage("sprites/enemies/articuno.png")
 end
 
 function initSounds()
@@ -54,7 +65,7 @@ end
 function drawBackground()
     grass = sprites[9]
     no_grass = sprites[90] 
-    rsz = 2.8
+    local rsz = 2.8
 
     love.graphics.setColor(0, 1, 1)
     for i = 0, WINDOW_WIDTH / grass:getWidth() do
