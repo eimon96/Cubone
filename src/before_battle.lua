@@ -3,10 +3,8 @@ function checkEnemy()
     if rand < 3 then
         e = pickEnemy()
         pkmn = true
-        state = 'battle'
         changeMusic()
-        play_growl = true
-        wait = 5*60
+        changeThings()
     end
 end
 
@@ -21,4 +19,11 @@ function pickEnemy()
     math.random(1,9); math.random(1,9); math.random(1,9)
 
     return math.random(1,9)
+end
+
+function changeThings()
+    state = 'battle'
+    x = WINDOW_WIDTH
+    play_growl = true
+    wait = 7*60
 end
