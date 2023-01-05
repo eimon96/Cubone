@@ -6,7 +6,7 @@ end
 function drawBattleField()
     local background = sprites[91] 
     love.graphics.draw(background)
-    
+
     love.graphics.print('1: Tackle', WINDOW_WIDTH - 190, WINDOW_HEIGHT - 90)
     love.graphics.print('2: Bone Throw', WINDOW_WIDTH - 190, WINDOW_HEIGHT - 60)
     love.graphics.print('R: Run', WINDOW_WIDTH - 190, WINDOW_HEIGHT - 30)
@@ -19,4 +19,16 @@ function drawEnemy()
     end
     
     love.graphics.draw(enemies[e].image, x, 5, 0, rsz, rsz)
+
+    love.graphics.setColor(0, 0, 0, 1)
+    love.graphics.setLineWidth(2)
+    love.graphics.rectangle("line", 40, 35, 250, 18, 7, 7)
+
+    enemies[e].health = 250 
+    love.graphics.setColor(1, 0, 0, 1)
+    love.graphics.rectangle("fill", 40 + 2, 35 + 2, 250 - 4, 18 - 4, 7, 7)
+
+
+    love.graphics.setLineWidth(1)
+    love.graphics.setColor(1, 1, 1, 1)
 end
