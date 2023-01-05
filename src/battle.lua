@@ -57,6 +57,7 @@ function taackle()
         tackle = false
     else
         enemies[e].health = 4.2
+        tackle = false
     end
 end
 
@@ -66,5 +67,6 @@ function boone()
         bone = false
     else
         enemies[e].health = 4.2
+        bone = false
     end
 end
