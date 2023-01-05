@@ -24,11 +24,47 @@ function drawEnemy()
     love.graphics.setLineWidth(2)
     love.graphics.rectangle("line", 40, 35, 250, 18, 7, 7)
 
-    enemies[e].health = 250 
     love.graphics.setColor(1, 0, 0, 1)
     love.graphics.rectangle("fill", 40 + 2, 35 + 2, enemies[e].health - 4, 18 - 4, 7, 7)
 
 
     love.graphics.setLineWidth(1)
     love.graphics.setColor(1, 1, 1, 1)
+end
+
+function battleModeOn()
+    if love.keyboard.isDown('r') then
+        run()
+    end
+    if love.keyboard.isDown('1') then
+        tackle = true
+    end
+    if love.keyboard.isDown('2') then
+        bone = true
+    end
+end
+
+function run()
+    sounds['battle']:stop()
+    sounds['music']:setLooping(true)
+    sounds['music']:play()
+    state = 'world'
+end
+
+function taackle()
+    if ( enemies[e].health > 42 ) then
+        enemies[e].health = enemies[e].health - 10
+        tackle = false
+    else
+        enemies[e].health = 4.2
+    end
+end
+
+function boone()
+    if ( enemies[e].health > 42 ) then
+        enemies[e].health = enemies[e].health - 30
+        bone = false
+    else
+        enemies[e].health = 4.2
+    end
 end

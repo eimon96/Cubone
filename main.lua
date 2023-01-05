@@ -9,6 +9,9 @@ function love.load()
     state = 'world'
     pkmn = false
 
+    tackle = false
+    bone = false
+
     cubone = sprites[1]
     SPEED = 120
     x = VIRTUAL_WIDTH
@@ -34,6 +37,14 @@ function love.draw()
         drawBattleField()
         drawCubone()
         drawEnemy()
+
+        if tackle then 
+            taackle()
+        end
+
+        if bone then
+            boone()
+        end
     end
 end
 
@@ -49,8 +60,6 @@ function love.update(dt)
             walkDown(dt)
         end
     end
-
-    
     if state == 'battle' and play_growl == true then
         wait = wait - 5
         if wait == 0 then
@@ -61,11 +70,6 @@ function love.update(dt)
     end
 
     if state == 'battle' then
-        if love.keyboard.isDown('r') then
-            sounds['battle']:stop()
-            sounds['music']:setLooping(true)
-            sounds['music']:play()
-            state = 'world'
-        end
+        battleModeOn()
     end
 end

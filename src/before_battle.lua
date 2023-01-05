@@ -26,4 +26,5 @@ function changeThings()
     i = WINDOW_WIDTH
     play_growl = true
     wait = 7*60
+    enemies[e].health = 250 
 end
