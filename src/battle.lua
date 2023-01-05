@@ -26,7 +26,7 @@ function drawEnemy()
 
     enemies[e].health = 250 
     love.graphics.setColor(1, 0, 0, 1)
-    love.graphics.rectangle("fill", 40 + 2, 35 + 2, 250 - 4, 18 - 4, 7, 7)
+    love.graphics.rectangle("fill", 40 + 2, 35 + 2, enemies[e].health - 4, 18 - 4, 7, 7)
 
 
     love.graphics.setLineWidth(1)
