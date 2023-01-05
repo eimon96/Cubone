@@ -23,7 +23,7 @@ end
 
 function changeThings()
     state = 'battle'
-    x = WINDOW_WIDTH
+    i = WINDOW_WIDTH
     play_growl = true
     wait = 7*60
 end

@@ -14,11 +14,11 @@ end
 
 function drawEnemy()
     local rsz = 3
-    if x > WINDOW_WIDTH - enemies[e].image:getWidth()*rsz - 5 then
-        x = x - 3
+    if i > WINDOW_WIDTH - enemies[e].image:getWidth()*rsz - 5 then
+        i = i - 3
     end
     
-    love.graphics.draw(enemies[e].image, x, 5, 0, rsz, rsz)
+    love.graphics.draw(enemies[e].image, i, 5, 0, rsz, rsz)
 
     love.graphics.setColor(0, 0, 0, 1)
     love.graphics.setLineWidth(2)

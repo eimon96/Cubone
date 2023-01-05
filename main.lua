@@ -59,4 +59,13 @@ function love.update(dt)
             play_growl = false
         end
     end
+
+    if state == 'battle' then
+        if love.keyboard.isDown('r') then
+            sounds['battle']:stop()
+            sounds['music']:setLooping(true)
+            sounds['music']:play()
+            state = 'world'
+        end
+    end
 end
