@@ -54,19 +54,17 @@ end
 function taackle()
     if ( enemies[e].health > 42 ) then
         enemies[e].health = enemies[e].health - 10
-        tackle = false
     else
         enemies[e].health = 4.2
-        tackle = false
     end
+    tackle = false
 end
 
 function boone()
     if ( enemies[e].health > 42 ) then
         enemies[e].health = enemies[e].health - 30
-        bone = false
     else
         enemies[e].health = 4.2
-        bone = false
     end
+    bone = false
 end
