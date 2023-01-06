@@ -34,18 +34,6 @@ function love.draw()
         drawBattleField()
         drawCubone()
         drawEnemy()
-
-        if tackle then 
-            taackle()
-        end
-
-        if bone then
-            boone()
-        end
-
-        if run then 
-            ruun()
-        end
     end
 end
 
@@ -61,7 +49,7 @@ function love.update(dt)
             walkDown(dt)
         end
     end
-    
+
     if state == 'battle' and play_growl == true then
         wait = wait - 5
         if wait == 0 then
@@ -73,5 +61,19 @@ function love.update(dt)
 
     if state == 'battle' then
         battleModeOn()
+
+        if tackle then
+            time = time - 1
+            taackle()
+        end
+
+        if bone then
+            time = time - 1
+            boone()
+        end
+
+        if run then 
+            ruun()
+        end
     end
 end

@@ -1,6 +1,6 @@
 function drawCubone()
     rsz = 2.6
-    love.graphics.draw(sprites[10], r, WINDOW_HEIGHT - sprites[10]:getHeight()*rsz + 30, 0, rsz, rsz)
+    love.graphics.draw(pose, r, WINDOW_HEIGHT - sprites[10]:getHeight()*rsz + 30, 0, rsz, rsz)
 end
 
 function drawBattleField()
@@ -36,33 +36,42 @@ function battleModeOn()
     if love.keyboard.isDown('r') then
         run = true
     end
-    
+
     if not run then
         if love.keyboard.isDown('1') then
+            time = 3
             tackle = true
-        end
-        if love.keyboard.isDown('2') then
+        elseif love.keyboard.isDown('2') then
+            time = 3
             bone = true
         end
     end
 end
 
 function taackle()
+    pose = sprites[11]
+    if ( enemies[e].health > 42 ) then
+        enemies[e].health = enemies[e].health - 5
+    else
+        enemies[e].health = 4.2
+    end
+    if time == 0 then 
+        pose  = sprites[10]
+        tackle = false
+    end
+end
+
+function boone()
+    pose = sprites[11]
     if ( enemies[e].health > 42 ) then
         enemies[e].health = enemies[e].health - 10
     else
         enemies[e].health = 4.2
     end
-    tackle = false
-end
-
-function boone()
-    if ( enemies[e].health > 42 ) then
-        enemies[e].health = enemies[e].health - 30
-    else
-        enemies[e].health = 4.2
+    if time == 0 then 
+        pose  = sprites[10]
+        bone = false
     end
-    bone = false
 end
 
 function ruun()

@@ -22,6 +22,7 @@ function initSprites()
     sprites[90] = love.graphics.newImage("sprites/no_grass.png")
     sprites[91] = love.graphics.newImage("sprites/battlefield.jpg")
     sprites[10] = love.graphics.newImage("sprites/cubone_battle.png")
+    sprites[11] = love.graphics.newImage("sprites/cubone_tackle.png")
 end
 
 function initEnemies()
