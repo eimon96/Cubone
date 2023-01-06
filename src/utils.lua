@@ -69,6 +69,9 @@ function setupWindow()
         resizable = false
     })
 
+    local ico = love.image.newImageData('sprites/win.png')
+    love.window.setIcon(ico)
+    
     love.window.setTitle('Cubone')
     love.graphics.setDefaultFilter("nearest", "nearest")
     love.mouse.setVisible(false)
