@@ -9,9 +9,6 @@ function love.load()
     state = 'world'
     pkmn = false
 
-    tackle = false
-    bone = false
-
     cubone = sprites[1]
     SPEED = 120
     x = VIRTUAL_WIDTH
@@ -44,6 +41,10 @@ function love.draw()
 
         if bone then
             boone()
+        end
+
+        if run then 
+            ruun()
         end
     end
 end

@@ -1,6 +1,6 @@
 function drawCubone()
-    local rsz = 2.6
-    love.graphics.draw(sprites[10], 0, WINDOW_HEIGHT - sprites[10]:getHeight()*rsz + 30, 0, rsz, rsz)
+    rsz = 2.6
+    love.graphics.draw(sprites[10], r, WINDOW_HEIGHT - sprites[10]:getHeight()*rsz + 30, 0, rsz, rsz)
 end
 
 function drawBattleField()
@@ -34,7 +34,7 @@ end
 
 function battleModeOn()
     if love.keyboard.isDown('r') then
-        run()
+        run = true
     end
     if love.keyboard.isDown('1') then
         tackle = true
@@ -42,13 +42,6 @@ function battleModeOn()
     if love.keyboard.isDown('2') then
         bone = true
     end
-end
-
-function run()
-    sounds['battle']:stop()
-    sounds['music']:setLooping(true)
-    sounds['music']:play()
-    state = 'world'
 end
 
 function taackle()
@@ -67,4 +60,16 @@ function boone()
         enemies[e].health = 4.2
     end
     bone = false
+end
+
+function ruun()
+    if r > - sprites[10]:getHeight()*rsz then 
+        r = r -3
+    else 
+        run = false
+        sounds['battle']:stop()
+        sounds['music']:setLooping(true)
+        sounds['music']:play()
+        state = 'world'
+    end
 end

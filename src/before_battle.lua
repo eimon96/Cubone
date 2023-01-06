@@ -24,6 +24,10 @@ end
 function changeThings()
     state = 'battle'
     i = WINDOW_WIDTH
+    r = 0
+    tackle = false
+    bone = false
+    run = false
     play_growl = true
     wait = 7*60
     enemies[e].health = 250 
