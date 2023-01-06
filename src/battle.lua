@@ -69,6 +69,7 @@ function boone()
     else
         enemies[e].health = 4.2
     end
+    sounds['bone']:play()
     if time == 0 then 
         pose  = sprites[10]
         bone = false

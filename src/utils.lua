@@ -57,6 +57,8 @@ function initSounds()
     sounds['hit']:setVolume(0.3)
     sounds['tackle'] = love.audio.newSource("sounds/tackle.wav", "static")
     sounds['tackle']:setVolume(0.5)
+    sounds['bone'] = love.audio.newSource("sounds/bone.wav", "static")
+    sounds['bone']:setVolume(0.5)
 end
 
 function setupWindow()
