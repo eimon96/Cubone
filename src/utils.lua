@@ -59,6 +59,8 @@ function initSounds()
     sounds['tackle']:setVolume(0.5)
     sounds['bone'] = love.audio.newSource("sounds/bone.wav", "static")
     sounds['bone']:setVolume(0.5)
+    sounds['cubone_growl'] = love.audio.newSource("sounds/growl/cubone.ogg", "static")
+    sounds['cubone_growl']:setVolume(0.5)
 end
 
 function setupWindow()

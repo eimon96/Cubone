@@ -34,6 +34,9 @@ end
 
 function battleModeOn()
     if love.keyboard.isDown('r') then
+        sounds['cubone_growl']:setVolume(0.3)
+        sounds['cubone_growl']:play()
+        
         run = true
     end
 
