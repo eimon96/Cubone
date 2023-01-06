@@ -36,10 +36,10 @@ function battleModeOn()
     if love.keyboard.isDown('r') then
         run = true
     end
-    if love.keyboard.isDown('1') then
+    if love.keyboard.isDown('1') and not run then
         tackle = true
     end
-    if love.keyboard.isDown('2') then
+    if love.keyboard.isDown('2') and not run then
         bone = true
     end
 end
