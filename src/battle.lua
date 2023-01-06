@@ -64,7 +64,7 @@ end
 
 function ruun()
     if r > - sprites[10]:getHeight()*rsz then 
-        r = r -3
+        r = r - 6
     else 
         run = false
         sounds['battle']:stop()

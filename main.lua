@@ -61,6 +61,7 @@ function love.update(dt)
             walkDown(dt)
         end
     end
+    
     if state == 'battle' and play_growl == true then
         wait = wait - 5
         if wait == 0 then
