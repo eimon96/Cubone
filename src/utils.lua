@@ -55,6 +55,8 @@ function initSounds()
     sounds['battle']:setVolume(0.7)
     sounds['hit'] = love.audio.newSource("sounds/hit.wav", "static")
     sounds['hit']:setVolume(0.3)
+    sounds['tackle'] = love.audio.newSource("sounds/tackle.wav", "static")
+    sounds['tackle']:setVolume(0.5)
 end
 
 function setupWindow()
@@ -71,7 +73,7 @@ function setupWindow()
 
     local ico = love.image.newImageData('sprites/win.png')
     love.window.setIcon(ico)
-    
+
     love.window.setTitle('Cubone')
     love.graphics.setDefaultFilter("nearest", "nearest")
     love.mouse.setVisible(false)

@@ -55,6 +55,7 @@ function taackle()
     else
         enemies[e].health = 4.2
     end
+    sounds['tackle']:play()
     if time == 0 then 
         pose  = sprites[10]
         tackle = false
