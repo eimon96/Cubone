@@ -29,6 +29,7 @@ function changeThings()
     tackle = false
     bone = false
     run = false
+    dead = false
     pose = sprites[10]
     play_growl = true
     wait = 7*60

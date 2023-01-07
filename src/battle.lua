@@ -40,7 +40,7 @@ function battleModeOn()
         run = true
     end
 
-    if not run and not play_growl then
+    if not run and not play_growl and not dead then
         if love.keyboard.isDown('1') then
             time = 3
             tackle = true
@@ -71,6 +71,7 @@ function taackle()
         enemies[e].health = enemies[e].health - 5
     else
         enemies[e].health = 4.2
+        dead = true
     end
     sounds['tackle']:play()
     if time == 0 then 
@@ -85,6 +86,7 @@ function boone()
         enemies[e].health = enemies[e].health - 10
     else
         enemies[e].health = 4.2
+        dead = true
     end
     sounds['bone']:play()
     if time == 0 then 
