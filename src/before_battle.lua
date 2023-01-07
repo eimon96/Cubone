@@ -34,4 +34,7 @@ function changeThings()
     play_growl = true
     wait = 7*60
     enemies[e].health = 250 
+
+    bone_x = sprites[10]:getWidth() - 20
+    bone_y = WINDOW_HEIGHT - sprites[10]:getHeight()
 end

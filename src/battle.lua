@@ -1,4 +1,6 @@
 function drawCubone()
+    love.graphics.draw(sprites[12], bone_x, bone_y)
+    
     rsz = 2.6
     love.graphics.draw(pose, r, WINDOW_HEIGHT - sprites[10]:getHeight()*rsz + 30, 0, rsz, rsz)
 end
@@ -75,13 +77,15 @@ function taackle()
     end
     sounds['tackle']:play()
     if time == 0 then 
-        pose  = sprites[10]
+        pose = sprites[10]
         tackle = false
     end
 end
 
 function boone()
     pose = sprites[11]
+    bone_x = bone_x + 8*6
+    bone_y = bone_y - 5*6
     if ( enemies[e].health > 42 ) then
         enemies[e].health = enemies[e].health - 10
     else
@@ -90,7 +94,9 @@ function boone()
     end
     sounds['bone']:play()
     if time == 0 then 
-        pose  = sprites[10]
+        pose = sprites[10]
+        bone_x = sprites[10]:getWidth() - 20
+        bone_y = WINDOW_HEIGHT - sprites[10]:getHeight()
         bone = false
     end
 end
