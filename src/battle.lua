@@ -1,5 +1,5 @@
 function drawCubone()
-    love.graphics.draw(sprites[12], bone_x, bone_y)
+    love.graphics.draw(sprites[12], bone_x, bone_y, bone_r)
     
     rsz = 2.6
     love.graphics.draw(pose, r, WINDOW_HEIGHT - sprites[10]:getHeight()*rsz + 30, 0, rsz, rsz)
@@ -84,8 +84,11 @@ end
 
 function boone()
     pose = sprites[11]
-    bone_x = bone_x + 8*6
-    bone_y = bone_y - 5*6
+
+    bone_x = bone_x + 70
+    bone_y = bone_y - 35
+    bone_r = bone_r - 0.6
+    
     if ( enemies[e].health > 42 ) then
         enemies[e].health = enemies[e].health - 10
     else
@@ -97,6 +100,7 @@ function boone()
         pose = sprites[10]
         bone_x = sprites[10]:getWidth() - 20
         bone_y = WINDOW_HEIGHT - sprites[10]:getHeight()
+        bone_r = 0
         bone = false
     end
 end

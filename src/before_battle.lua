@@ -37,4 +37,5 @@ function changeThings()
 
     bone_x = sprites[10]:getWidth() - 20
     bone_y = WINDOW_HEIGHT - sprites[10]:getHeight()
+    bone_r = 0
 end
