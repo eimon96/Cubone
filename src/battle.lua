@@ -102,6 +102,9 @@ function boone()
 end
 
 function ruun()
+    bone_x = -50
+    bone_y = -50
+
     if r > - sprites[10]:getHeight()*rsz then 
         r = r - 6
     else 
