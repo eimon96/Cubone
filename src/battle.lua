@@ -40,7 +40,7 @@ function battleModeOn()
         run = true
     end
 
-    if not run then
+    if not run and not play_growl then
         if love.keyboard.isDown('1') then
             time = 3
             tackle = true
