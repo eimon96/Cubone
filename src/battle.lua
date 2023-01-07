@@ -85,10 +85,12 @@ end
 function boone()
     pose = sprites[11]
 
-    bone_x = bone_x + 70
-    bone_y = bone_y - 35
-    bone_r = bone_r - 0.6
-    
+    if bone_x < i + enemies[e].image:getWidth() / 2 and bone_y > e_h + enemies[e].image:getHeight() / 2 then
+        bone_x = bone_x + 70
+        bone_y = bone_y - 35
+        bone_r = bone_r - 0.6
+    end
+
     if ( enemies[e].health > 42 ) then
         enemies[e].health = enemies[e].health - 10
     else
