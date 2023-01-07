@@ -44,9 +44,11 @@ function battleModeOn()
         if love.keyboard.isDown('1') then
             time = 3
             tackle = true
+            bone = false
         elseif love.keyboard.isDown('2') then
             time = 3
             bone = true
+            tackle = false
         end
     end
 end
