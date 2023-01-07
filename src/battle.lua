@@ -18,7 +18,7 @@ function drawEnemy()
         i = i - 3
     end
     
-    love.graphics.draw(enemies[e].image, i, 5, 0, rsz, rsz)
+    love.graphics.draw(enemies[e].image, i, e_h, 0, rsz, rsz)
 
     love.graphics.setColor(0, 0, 0, 1)
     love.graphics.setLineWidth(2)
@@ -50,6 +50,18 @@ function battleModeOn()
             bone = true
             tackle = false
         end
+    end
+
+    if enemies[e].health <= 4.2 then 
+        if e_h == 5 then 
+            enemies[e].growl:setVolume(0.3)
+            enemies[e].growl:play()
+        end
+        if e_h > WINDOW_HEIGHT + enemies[e].image:getHeight() + 30 then
+            backToWorld()        
+        end
+
+        e_h = e_h + 12
     end
 end
 
@@ -86,9 +98,13 @@ function ruun()
         r = r - 6
     else 
         run = false
-        sounds['battle']:stop()
-        sounds['music']:setLooping(true)
-        sounds['music']:play()
-        state = 'world'
+        backToWorld()
     end
+end
+
+function backToWorld()
+    sounds['battle']:stop()
+    sounds['music']:setLooping(true)
+    sounds['music']:play()
+    state = 'world'
 end

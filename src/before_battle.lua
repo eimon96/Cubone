@@ -24,6 +24,7 @@ end
 function changeThings()
     state = 'battle'
     i = WINDOW_WIDTH
+    e_h = 5
     r = 0
     tackle = false
     bone = false
