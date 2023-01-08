@@ -10,9 +10,9 @@ Have Fun! xD
 
 --------------------------------------------------------------------
 
-<img src="https://i.imgur.com/WNRlUM1.png" width="450" height="299"> <img src="https://i.imgur.com/GcaiXLj.png" width="450" height="299"> 
+<img src="https://i.imgur.com/WNRlUM1.png" width="225" height="150"> <img src="https://i.imgur.com/GcaiXLj.png" width="225" height="150"> 
 
-<img src="https://i.imgur.com/mUSKu6F.png" width="450" height="299"> <img src="https://i.imgur.com/PfhMITc.png" width="450" height="299">
+<img src="https://i.imgur.com/mUSKu6F.png" width="225" height="150"> <img src="https://i.imgur.com/PfhMITc.png" width="225" height="150">
 
 --------------------------------------------------------------------
 
