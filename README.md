@@ -16,4 +16,6 @@ Have Fun! xD
 
 --------------------------------------------------------------------
 
+## Disclaimer! This project created exclusively for fun. All copyrights for pokemon franchise belong to _[nintendo](https://www.nintendo.com/)_
+
 @author: eimon 😷
